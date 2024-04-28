@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Website</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+    integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+
+  <style>
+    @media (min-width: 786px) {
+      .owl-carousel .item-video {
+        max-height: 250px;
+        height: 250px;
+      }
+
+    }
+
+    @media (max-width: 786px) {
+      .cardz {
+        height: 274px;
+      }
+    }
+
+    @media (max-width: 425px) {
+      .cardz {
+        max-height: 190px;
+        min-height: 209px;
+      }
+
+      .owl-carousel .item-video {
+        max-height: 250px;
+        height: 250px;
+      }
+
+    }
+
+    .htext-side {
+      color: #014C97;
+      padding: 32px 5px 0px 5px;
+      margin-top: 16px;
+    }
+
+    .htext {
+      text-align: center;
+      color: #014C97;
+      padding: 25px 5px 17px 5px;
+    }
+
+    h5 {
+      text-align: center;
+      color: white !important;
+    }
+
+    .cardz {
+      background-color: #014C97;
+      border-radius: 10px;
+    }
+
+    .imgz {
+      border-radius: 10px;
+      padding: 5px;
+
+    }
+
+    .btn-banner {
+      position: relative;
+    }
+
+    .btn-banner .btn {
+      position: absolute;
+      top: 73%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #E78500;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .btn {
+      background-color: #E78500;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: #014C97;
+      color: white;
+
+    }
+
+    .btn-banner .btn:hover {
+      background-color: #014C97;
+    }
+
+    #more {
+      display: none;
+    }
+
+    .owl-carousel .owl-video-tn {
+      background-size: cover;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      padding-top: 25px;
+    }
+
+    .owl-video-frame {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+    }
+
+    .owl-video-frame iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .owl-dots {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .owl-dot {
+      display: inline-block;
+    }
+
+    .owl-dot span {
+      width: 11px;
+      height: 11px;
+      background-color: #ccc;
+      border-radius: 50%;
+      display: block;
+      margin: 5px 3px;
+    }
+
+    .owl-dot.active span {
+      background-color: #000;
+    }
+
+    #owl-demo .item {
+      margin: 3px;
+    }
+
+    #owl-demo .item img {
+      display: block;
+      width: 100%;
+      min-height: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="btn-banner">
+      <img style="min-height: 100%;
+        width: 1650px;
+        height: 398px;
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;"
+        src="https://dev.zamilcostore.com/image/cache/catalog/Banners/SAFoundingDay/2-1650x550.jpg">
+      <button class="btn" style="
+        border-radius: 20px;"><a style="text-decoration: none; color: white;"
+          href="https://store.zamilco.com/index.php?route=information/insulation">اطلب استشارتك المجانية</a></button>
+      <h1 class="htext">خدمات العزل من الزامل</h1>
+    </div>
+    <div class="row" style="padding: 15px;">
+      <div class="col-lg col-sm-4 col-4">
+        <div class="card cardz">
+          <img class="card-img-top imgz"
+            src="https://buntingmagnetics.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">العزل الاسمنتي للخزانات والمسابح والبدرومات</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-sm-4 col-4">
+        <div class="card cardz">
+          <img class="card-img-top imgz"
+            src="https://buntingmagnetics.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">العزل المائي بأستخدام البولي يوريا</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-sm-4 col-4">
+        <div class="card cardz">
+          <img class="card-img-top imgz"
+            src="https://buntingmagnetics.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">العزل المائي باللفات البيتومينية للأرضيات</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding: 15px;">
+      <div class="col-lg col-sm-4 col-4">
+        <div class="card cardz">
+          <img class="card-img-top imgz"
+            src="https://buntingmagnetics.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">العزل المائي بأستخدام اللفات البيتومينية للخزانات والمسابح</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-sm-4 col-4">
+        <div class="card cardz">
+          <img class="card-img-top imgz"
+            src="https://buntingmagnetics.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">العزل للاسطح بأستخدام مواد البوليوريثان وطبقة الحماية</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-sm-4 col-4">
+        <div class="card cardz">
+          <img class="card-img-top imgz"
+            src="https://buntingmagnetics.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">عزل المائي للحمامات والمطابخ بأستخدام مواد البوليوريثان</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- second btn CTA-->
+    <div style="text-align: center; padding: 20px 5px 17px 5px;">
+      <button class="btn"><a style="text-decoration: none; color: white;"
+          href="https://store.zamilco.com/index.php?route=information/insulation">اطلب استشارتك المجانية</a></button>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <!-- paragraph -->
+        <div style="text-align: center; padding: 17px 5px 35px  5px; font-size: 2rem; font-weight: 500;">
+          <p>كانت البداية في منتصف التسعينات الميلادية وذلك من خلال بيع مواد العزل ضمن النشاط الأساسي للشركة في ذلك
+            الوقت وهو بيع مواد البناء.. ولقلة المنفذين الجيدين لأعمال العزل وتحت الحاح الكثير من العملاء ورغبة القائمين
+            على الشركة أيضا في اقتحام هذا السوق تم إنشاء قسم متخصص في الشركة لأعمال العزل المائي باللفات البيتيومينية (
+            الرول) بدايةً للأسطح و الخزانات الأرضية بالتعاون مع أهم المصانع الوطنية لإنتاج لفات الرول على اعلى المواصفات
+            المطلوبة والتي كانت تشترطها الشركة دائما حرصا على بناء اسم مرتبط بالجودة والثقة في هذا العالم... <span
+              id="dots">...</span><span id="more">ولأن الطموح لا يتوقف مهما كانت التحديات تم التوسع الكبير في عام 200‪5
+              حيث تم البدء في عزل الأسطح بنظام البولي يوريثان وعزل دورات المياه وأعمال العزل الأسمنتي وإصلاح الخرسانات
+              والدهانات الايبوكسية بكافة أنواعها واستخداماتها.. تزامن مع ذلك بالطبع استقطاب الخبرات الهندسية في هذا
+              المجال وتدريب الأيدي العاملة في مصانع مواد العزل في المملكة العربية السعودية وحتى في دبي وإسبانيا وغيرها..
+
+
+              في العام ٢٠١٧ بادر مصنع الزامل في تصنيع بعض مواد العزل ودهانات الاكريلك على اعلى المواصفات القياسية
+              العالمية والتي لاقت رواجا كبيرا بين المعماريين في قطاع البناء نظرا لجودتها العالية واسعارها المنافسة .
+
+
+              وبعد هذه السنين من الخبرة في مجال العزل أصبح لدى فريق العزل اشتراطات وتجهيزات لا يمكن التغاضي عنها في
+              المواقع قبل أعمال العزل وذلك سعيا لضمان أعمال حقيقي وجودة تنفيذ مرضية للعملاء ولإسم الشركة كمنفذ عزل معتمد
+              في كثير من الجهات الحكومية والتجارية وقطاع البناء بشكلٍ عام.
+
+
+              اليوم يعتبر قسم العزل المائي والحراري في شركة الزامل صرح متكامل أُسس بفكرة وحلم.. ودُعم من الادارة العليا
+              بكل الإمكانيات حتى أصبح على هذا الواقع الكبير ابتداءا من إدارة هندسية متخصصة وفريق عمل مدرّب وخدمة عملاء
+              على مدار أيام الأسبوع.. في سبيل الحفاظ على اسم تثقون به يشارككم فرحة الإنجاز في كل مشروع.</span><a
+              onclick="myFunction()" id="myBtn" style="text-decoration: underline blue; color: blue;">أقرأ المزيد</a>
+          </p>
+        </div>
+        <script>
+          function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              btnText.innerHTML = "أقرأ المزيد";
+              moreText.style.display = "none";
+            } else {
+              dots.style.display = "none";
+              btnText.innerHTML = "أقرأ أقل";
+              moreText.style.display = "inline";
+            }
+          }
+        </script>
+
+        <!-- Video section-->
+        <div class="embed-responsive embed-responsive-16by9" style="text-align: center;">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/U_IjP9FtOC0?autoplay=1"
+            title="قسم العزل المائي والحراري من الزامل" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Section with video -->
+    <h1 class="htext-side">أراء العملاء</h1>
+    <div style="direction: ltr; padding: 17px 5px 17px 5px;">
+
+      <div class="owl-carousel owl-theme">
+        <div class="item-video"><a style="width: 100%; height: 100%;" class="owl-video"
+            href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a></div>
+        <div class="item-video"><a style="width: 100%; height: 100%;" class="owl-video"
+            href="https://www.youtube.com/watch?v=FBu_jxT1PkA"></a></div>
+        <div class="item-video"><a style="width: 100%; height: 100%;" class="owl-video"
+            href="https://www.youtube.com/watch?v=oy18DJwy5lI"></a></div>
+        <div class="item-video"><a style="width: 100%; height: 100%;" class="owl-video"
+            href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
+        <div class="item-video"><a style="width: 100%; height: 100%;" class="owl-video"
+            href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a></div>
+        <div class="item-video"><a style="width: 100%; height: 100%;" class="owl-video"
+            href="https://www.youtube.com/watch?v=0fhoIate4qI"></a></div>
+        <div class="item-video"><a style="width: 100%; height: 100%;" class="owl-video"
+            href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a></div>
+      </div>
+
+    </div>
+    <script>
+      $('.owl-carousel').owlCarousel({
+        merge: true,
+        loop: true,
+        margin: 10,
+        video: true,
+        lazyLoad: true,
+        center: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        responsive: {
+          0: {
+            items: 2,
+          },
+          600: {
+            items: 2,
+          }
+        }
+      })
+    </script>
+
+    <!-- Third btn CTA-->
+    <div style="text-align: center; padding: 20px 5px 0px 5px;">
+      <button class="btn"><a style="text-decoration: none; color: white;"
+          href="https://store.zamilco.com/index.php?route=information/insulation">اطلب استشارتك المجانية</a></button>
+    </div>
+
+    <!-- Last Section Projects-->
+    <h1 class="htext-side">أحدث المشاريع</h1>
+    <div style="direction: ltr; padding: 17px 5px 17px 5px;">
+      <div id="owl-demo" class="owl-carousel owl-theme">
+        <div class="item"><img src="https://buntingmagnetics.com/wp-content/uploads/2015/04/400x300.gif"></div>
+        <div class="item"><img src="https://buntingmagnetics.com/wp-content/uploads/2015/04/400x300.gif"></div>
+        <div class="item"><img src="https://buntingmagnetics.com/wp-content/uploads/2015/04/400x300.gif"></div>
+        <div class="item"><img src="https://buntingmagnetics.com/wp-content/uploads/2015/04/400x300.gif"></div>
+        <div class="item"><img src="https://buntingmagnetics.com/wp-content/uploads/2015/04/400x300.gif"></div>
+        <div class="item"><img src="https://buntingmagnetics.com/wp-content/uploads/2015/04/400x300.gif"></div>
+        <div class="item"><img src="https://buntingmagnetics.com/wp-content/uploads/2015/04/400x300.gif"></div>
+      </div>
+    </div>
+    <script>$(document).ready(function () {
+
+        $("#owl-demo").owlCarousel({
+
+          autoplay: true,
+          autoplayTimeout: 2000,
+          loop: true,
+          responsive: {
+            0: {
+              items: 2,
+            },
+            600: {
+              items: 3,
+            }
+          }
+
+        });
+
+      });</script>
+  </div>
+</body>
+
+</html>
